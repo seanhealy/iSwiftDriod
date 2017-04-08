@@ -1,0 +1,6 @@
+[submodule "android/deps/deps/djinni"]
+	path = android/deps/deps/djinni
+	url = https://github.com/dropbox/djinni.git
+[submodule "android/deps/gyp"]
+	path = android/deps/gyp
+	url = https://chromium.googlesource.com/external/gyp.git

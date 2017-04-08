@@ -28,3 +28,6 @@ https://lists.swift.org/pipermail/swift-dev/Week-of-Mon-20151207/000171.html
 
 ### Djinni (Dropbox tool for generating cross-language type declarations and interface bindings)
 https://github.com/dropbox/djinni
+
+### SwiftJava - bridging Swift to a JavaVM
+https://github.com/SwiftJava/SwiftJava
