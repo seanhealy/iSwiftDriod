@@ -65,22 +65,32 @@ Vagrant.configure("2") do |config|
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", privileged: false, inline: <<-SHELL
+    # Get our dependencies.
     sudo apt-get update -qq
     sudo apt-get install -qq -y \
       git cmake ninja-build clang python uuid-dev libicu-dev icu-devtools libbsd-dev libedit-dev \
       libxml2-dev libsqlite3-dev swig libpython-dev libncurses5-dev pkg-config \
-      libblocksruntime-dev libcurl4-openssl-dev autoconf libtool systemtap-sdt-dev
+      libblocksruntime-dev libcurl4-openssl-dev autoconf libtool systemtap-sdt-dev unzip
     
+    # Make a home for swift.
     mkdir -p ~/swift
 
+    # Swift wants a ninja friend.
     cd ~/swift
     git clone https://github.com/ninja-build/ninja.git
     cd ninja
     git checkout release
     
+    # Now that we have a ninja get and build Swift.
     mkdir -p ~/swift/swift-source
     cd ~/swift/swift-source
     git clone https://github.com/apple/swift.git
     ./swift/utils/update-checkout --clone
+
+    # Get the Android Nude Developement Kit.
+    mkdir -p ~/android
+    cd ~/android
+    wget https://dl.google.com/android/repository/android-ndk-r14b-linux-x86_64.zip
+    unzip android-ndk-r14b-linux-x86_64.zip
   SHELL
 end
