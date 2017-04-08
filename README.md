@@ -15,3 +15,6 @@ http://romain.goyet.com/articles/running_swift_code_on_android/
 
 ### Getting Started With Multi File Command Line Swift
 http://sgeos.github.io/swift/2016/02/08/getting-started-with-multi-file-command-line-swift.html
+
+### Getting Started with Swift on Android
+https://github.com/apple/swift/blob/master/docs/Android.md
