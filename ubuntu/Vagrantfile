@@ -37,7 +37,7 @@ Vagrant.configure("2") do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  # config.vm.synced_folder "../data", "/vagrant_data"
+  config.vm.synced_folder "../", "/iSwiftDroid"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -64,8 +64,23 @@ Vagrant.configure("2") do |config|
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
-  # config.vm.provision "shell", inline: <<-SHELL
-  #   apt-get update
-  #   apt-get install -y apache2
-  # SHELL
+  config.vm.provision "shell", privileged: false, inline: <<-SHELL
+    sudo apt-get update -qq
+    sudo apt-get install -qq -y \
+      git cmake ninja-build clang python uuid-dev libicu-dev icu-devtools libbsd-dev libedit-dev \
+      libxml2-dev libsqlite3-dev swig libpython-dev libncurses5-dev pkg-config \
+      libblocksruntime-dev libcurl4-openssl-dev autoconf libtool systemtap-sdt-dev
+    
+    mkdir -p ~/swift
+
+    cd ~/swift
+    git clone https://github.com/ninja-build/ninja.git
+    cd ninja
+    git checkout release
+    
+    mkdir -p ~/swift/swift-source
+    cd ~/swift/swift-source
+    git clone https://github.com/apple/swift.git
+    ./swift/utils/update-checkout --clone
+  SHELL
 end
