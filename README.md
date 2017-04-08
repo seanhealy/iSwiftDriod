@@ -18,3 +18,13 @@ http://sgeos.github.io/swift/2016/02/08/getting-started-with-multi-file-command-
 
 ### Getting Started with Swift on Android
 https://github.com/apple/swift/blob/master/docs/Android.md
+
+### SwiftAndroid (github group/org)
+https://github.com/SwiftAndroid
+https://github.com/SwiftAndroid/swift/commit/7c502b6344a240c8e06c5e48e5ab6fa32c887ab3
+
+### Proof-of-concept port of Swift for Android
+https://lists.swift.org/pipermail/swift-dev/Week-of-Mon-20151207/000171.html
+
+### Djinni (Dropbox tool for generating cross-language type declarations and interface bindings)
+https://github.com/dropbox/djinni
