@@ -6,8 +6,9 @@ Get yourself some Vagrant.
 From within `ubuntu` do:
 
 `vagrant up`
+`vagrant ssh`
 
-You will now have Swift in Ubuntu (I hope.)
+Hope… (I'm working on this step.)
 
 
 ## Resources
