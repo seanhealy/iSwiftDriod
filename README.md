@@ -8,7 +8,7 @@ From within `ubuntu` do:
 `vagrant up`
 `vagrant ssh`
 
-Hope… (I'm working on this step.)
+Hope… (Working on this step.)
 
 
 ## Resources
@@ -21,8 +21,6 @@ Hope… (I'm working on this step.)
 
 
 ### Resources Archive
-
-<details>
 
 - Why we put an app in the Play Store Store using Swift
   - https://medium.com/@ephemer/why-we-put-an-app-in-the-android-play-store-using-swift-96ac87c88dfc
@@ -47,5 +45,3 @@ Hope… (I'm working on this step.)
 
 - Djinni (Dropbox tool for generating cross-language type declarations and interface bindings)
   - https://github.com/dropbox/djinni
-
-</details>
