@@ -1,5 +1,11 @@
 # iSwiftDriod
 
+## Note
+
+A lot of the docs and resources listed here are in reference to Swift 3. With Swift 4 Apple has added better docs about running in Android here:
+
+- https://github.com/apple/swift/blob/master/docs/Android.md
+
 ## Running
 Get yourself some Vagrant.
 
@@ -12,9 +18,6 @@ Hope… (Working on this step.)
 
 
 ## Resources
-
-- Getting Started with Swift on Android
-  - https://github.com/apple/swift/blob/master/docs/Android.md
 
 - SwiftJava - bridging Swift to a JavaVM
   - https://github.com/SwiftJava/SwiftJava
